@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["type", "title", "choices"],
+  "properties": {
+    "type": { "const": "choice-list" },
+    "title": { "type": "string" },
+    "description": { "type": "string" },
+    "multiple": { "type": "boolean", "default": false },
+    "choices": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "label"],
+        "properties": {
+          "id": { "type": "string" },
+          "label": { "type": "string" },
+          "description": { "type": "string" },
+          "icon": { "type": "string" }
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

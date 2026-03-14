@@ -1,0 +1,7 @@
+{
+  "name": "@agent-base/contracts",
+  "version": "0.1.0",
+  "description": "Shared JSON schemas for agent-base UI components and events",
+  "main": "index.js",
+  "files": ["components/", "events/"]
+}

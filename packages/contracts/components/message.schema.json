@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["type", "content"],
+  "properties": {
+    "type": { "const": "message" },
+    "content": { "type": "string", "description": "Contenu markdown" },
+    "metadata": { "type": "object" }
+  },
+  "additionalProperties": false
+}

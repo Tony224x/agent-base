@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["conversationId", "type"],
+  "properties": {
+    "conversationId": { "type": "string" },
+    "type": {
+      "enum": ["text", "form_submit", "choice_select", "confirmation", "card_action"]
+    },
+    "text": { "type": "string" },
+    "formData": { "type": "object" },
+    "selectedChoices": { "type": "array", "items": { "type": "string" } },
+    "confirmed": { "type": "boolean" },
+    "cardActionId": { "type": "string" },
+    "cardId": { "type": "string" }
+  }
+}

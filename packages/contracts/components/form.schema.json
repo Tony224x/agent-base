@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["type", "title", "fields"],
+  "properties": {
+    "type": { "const": "form" },
+    "title": { "type": "string" },
+    "description": { "type": "string" },
+    "fields": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "fieldType", "label"],
+        "properties": {
+          "name": { "type": "string" },
+          "fieldType": {
+            "enum": ["text", "textarea", "number", "email", "select", "multiselect", "checkbox", "date", "file"]
+          },
+          "label": { "type": "string" },
+          "placeholder": { "type": "string" },
+          "required": { "type": "boolean", "default": false },
+          "options": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["label", "value"],
+              "properties": {
+                "label": { "type": "string" },
+                "value": { "type": "string" }
+              }
+            }
+          },
+          "validation": {
+            "type": "object",
+            "properties": {
+              "pattern": { "type": "string" },
+              "min": { "type": "number" },
+              "max": { "type": "number" },
+              "minLength": { "type": "integer" },
+              "maxLength": { "type": "integer" }
+            }
+          },
+          "defaultValue": {}
+        }
+      }
+    },
+    "submitLabel": { "type": "string", "default": "Envoyer" },
+    "cancelLabel": { "type": "string" }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["eventType", "conversationId", "timestamp"],
+  "properties": {
+    "eventType": {
+      "enum": ["token", "component", "tool_start", "tool_end", "error", "done"]
+    },
+    "conversationId": { "type": "string" },
+    "timestamp": { "type": "string", "format": "date-time" },
+    "token": { "type": "string", "description": "For eventType=token, the streamed token" },
+    "component": {
+      "description": "For eventType=component, the UI component to render",
+      "type": "object"
+    },
+    "toolName": { "type": "string", "description": "For eventType=tool_start|tool_end" },
+    "error": { "type": "string", "description": "For eventType=error" }
+  }
+}
