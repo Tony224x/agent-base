@@ -1,0 +1,30 @@
+/* ---------------------------------------------------------------------------
+ * Design tokens — CSS custom properties for theming <agent-chat>.
+ *
+ * Consumers can override any of these on the <agent-chat> element or any
+ * ancestor to customise the appearance without touching Shadow DOM internals.
+ * --------------------------------------------------------------------------- */
+
+:host {
+  /* Brand / accent */
+  --agent-primary-color: #0071e3;
+
+  /* Surface colours */
+  --agent-bg-color: #ffffff;
+  --agent-surface-color: #f5f5f7;
+
+  /* Text */
+  --agent-text-color: #1d1d1f;
+
+  /* Borders */
+  --agent-border-color: #e5e5ea;
+  --agent-border-radius: 12px;
+
+  /* Typography */
+  --agent-font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+
+  /* Semantic */
+  --agent-error-color: #ff3b30;
+  --agent-success-color: #34c759;
+}
